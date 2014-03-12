@@ -16,17 +16,17 @@ p, span {
 }
 
 	.billboard h2 {
-		font-size: 52px;
+		font-size: 42px;
 		font-weight: 100;
 	}
 
 	.billboard p {
-		font-size: 18px;
-		line-height: 28px;
+		font-size: 16px;
+		line-height: 24px;
 	}
 
 	.messaging {
-		padding: 20px 0 0 0;
+		padding: 15px 0 0 0;
 		display: inline-block;
 		width: 100%;
 		bottom: 0;
@@ -386,6 +386,16 @@ p, span {
 		background: url(../img/billboard1.jpg) center center no-repeat #262626;
 		padding: 0;
 	}
+
+		.billboard h2 {
+			font-size: 48px;
+			font-weight: 100;
+		}
+
+		.billboard p {
+			font-size: 18px;
+			line-height: 26px;
+		}
 	
 	.signup {
 		width: 240px;
