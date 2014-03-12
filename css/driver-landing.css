@@ -7,10 +7,12 @@ p, span {
 }
 
 .billboard {
-	height: 692px;
-	background: url(../img/billboard1.jpg) center center no-repeat #262626;
+	height: auto;
+	background: url(../img/billboard1sm.jpg) center center no-repeat #262626;
+	background-size: 100% 100%;
 	color: #fff;
 	position: relative;
+	padding-bottom: 30px;
 }
 
 	.billboard h2 {
@@ -24,12 +26,12 @@ p, span {
 	}
 
 	.messaging {
-		background: rgba(0,0,0,0.5);
-		padding: 30px 0;
+		padding: 20px 0 0 0;
 		display: inline-block;
 		width: 100%;
-		position: absolute;
 		bottom: 0;
+		position: initial;
+		text-align: center;
 	}
 
 .header {
@@ -51,14 +53,14 @@ p, span {
 
 .signup {
 	width: 270px;
-	top: 150px;
+	position: relative;
+	top:initial;
+	margin: 20px auto 0 auto;
 	background: #eee;
 	border: 1px solid #dddddd;
 	text-align: center;
 	color: #000;
 	padding: 20px;
-	margin-left: 40px;
-	position: fixed;
 }
 
 	.signup h3 {
@@ -124,7 +126,8 @@ p, span {
 		} ::-moz-focus-inner {border:0;}
 
 .feature-row { 
-	margin-top: 80px;
+	margin-top: 30px;
+	text-align: center;
 }
 
 	.feature-row h3 {
@@ -183,12 +186,6 @@ p, span {
 		width: 182px;
 	}
 
-.video {
-	margin: 0 auto;
-	max-width:600px;
-	height: auto;
-}
-
 .grid-row {
 	display: table;
 	border-collapse: separate;
@@ -198,12 +195,12 @@ p, span {
 .testie {
 	background: #eee;
 	border: 1px solid #dddddd;
-	margin: 15px;
+	display: block;
+	width: auto;
+	margin: 0;
 	padding: 26px;
 	height: 100%;
-	width: 50%;
 	float: none;
-	display: table-cell;
 	vertical-align: top;
 }
 
@@ -258,6 +255,22 @@ p, span {
 		padding-right: 6px;
 	}
 
+
+.grid-row {
+	border-spacing: 0;
+}
+
+.gfx {
+	background-size: 80% 80%;
+	background-position-x: 50%;
+	background-position-y: 50%;
+}
+
+.video {
+	width: 90%;
+	margin: 0 auto;
+}
+
 .faq { 
 	width: 100%;
 	margin-top: 60px;
@@ -293,22 +306,57 @@ p, span {
 		cursor: pointer;
 	}
 
-		/*.faq dt:first-child {
-			border-top: 1px solid #3c3c3c;
-		}*/
+	.faq dd {
+		text-transform: initial;
+    	font-family: ff-clan-web-pro, sans-serif;
+		font-size: 14px;
+		color: #ccc;
+		margin: 0;
+		position: relative;
+		display: block;
+		padding-bottom: 20px;
+	}
 
-		.faq dd {
-			text-transform: initial;
-			font-size: 14px;
-			color: #ccc;
-			margin: 0;
-			position: relative;
-			display: block;
-			padding-bottom: 20px;
+.mobile-cta {
+}
+
+	.mobile-cta h3 {
+		color: #fff;
+	}
+
+	.mobile-cta a {
+		display: inline-block;
+		margin: 16px 0 32px;
+		font-weight: 500;
+		text-transform: uppercase;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		background-image: none;
+		color: #fff;
+		white-space: nowrap;
+		font-size: 14px;
+		line-height: 1.42857143;
+		border-radius: 0;
+		background: -webkit-linear-gradient(top, #2ec8e3, #14a5bf);
+		border: none;
+		border-radius: 5px;
+		padding: 12px 48px;
+	}
+
+		.mobile-cta a:hover {
+			background: -webkit-linear-gradient(top, #1fb6d0, #098fa7);
 		}
 
-		.faq dd.answer-hide {
+		.mobile-cta a:active {
+			-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.15);
+			box-shadow: inset 0 5px 10px rgba(0,0,0,.15);		
+			background: -webkit-linear-gradient(top, #1fb6d0, #098fa7);
 		}
+
+		.mobile-cta a:focus {
+			outline:none;
+			} ::-moz-focus-inner {border:0;}
 
 .footer {
 	background: #000;
@@ -327,50 +375,78 @@ p, span {
 		color: #ccc;
 	}
 
-@media (max-width: 1199px) {
-	.signup {
-		width: 240px;
-		margin-left: 20px;
-	}
+@media (min-width: 768px) {
+
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
+
 	.billboard {
-		height: auto;
-		background: #262626;
+		height: 692px;
+		background: url(../img/billboard1.jpg) center center no-repeat #262626;
+		padding: 0;
+	}
+	
+	.signup {
+		width: 240px;
+		top: 50px;
+		margin-left: 20px;
+		z-index: 150;
+	}
+
+	.affix {
+		position: fixed;
+	}
+
+	.affix-top {
+		position: relative;
+		z-index: 150;
 	}
 
 	.messaging {
-		position: initial;
-		text-align: center;
-	}
-
-	.signup {
-		width: 270px;
-		position: relative;
-		top:initial;
-		margin: 20px auto 0 auto;
+		position: absolute;
+		text-align: left;
+		background: rgba(0,0,0,0.5);
+		padding: 30px 0;
 	}
 
 	.feature-row {
-		text-align: center;
+		margin-top: 80px;
+		text-align: left;
+	}
+
+	.mobile-cta {
+		display: none;
+	}
+
+	.grid-row {
+		display: table;
+		border-collapse: separate;
+		border-spacing: 20px 10px;
+	}
+
+	.gfx {
+		background-size: 100%;
+	}
+
+	.testie {
+		display: table-cell;
+		width: 50%;
+		margin: 15px;
+	}
+
+	.video {
+		margin: 0 auto;
+		max-width:600px;
+		height: auto;
 	}
 }
 
-@media (max-width: 767px) {
-	/*.signup {
-		width: 90%;
-	}*/
-	.testie {
-		display: block;
-		width: auto;
-		margin: 0;
-	}
-	.grid-row {
-		border-spacing: 0;
-	}
-	.video {
-		width: 90%;
-		margin: 0 auto;
+@media (min-width: 1200px) {
+	.signup {
+		width: 270px;
+		margin: 0 0 0 40px;
 	}
 }
+
+
