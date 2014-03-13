@@ -294,7 +294,6 @@ p, span {
 		text-align: left;
 		padding: 10px 0 0 0;
 		margin-bottom: 20px;
-		border-bottom: 1px solid #3c3c3c;
 	}
 
 	.faq dt {
@@ -315,6 +314,19 @@ p, span {
 		position: relative;
 		display: block;
 		padding-bottom: 20px;
+	}
+
+	.faq dt.faq-subtitle {
+		color: #ccc;
+		background: #3c3c3c;
+		padding: 16px 20px;
+		cursor: default;
+		font-size: 14px;
+		margin-top: 16px;
+	}
+
+	.faq dt.faq-subtitle:first-child {
+		margin-top: 0;
 	}
 
 .mobile-cta {
